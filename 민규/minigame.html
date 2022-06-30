@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+        }
+        .box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .pic{
+            display: flex;
+            justify-content: center;
+        }
+        .title{
+            font-size: 70px;
+
+        }
+
+
+    </style>
+
+    <script>
+
+        var goal=0;
+        var playingtime=0; 
+
+        function shotL(){
+            var shotL= Math.random();
+            if (0<=shotL && shotL<0.3){
+                document.getElementById("a").src="basic.png";
+                document.getElementById("a").src="LL.png";
+                alert('키퍼에게 방향을 읽혔습니다 키퍼의 세이브!');
+                playingtime+=1 
+                
+            }
+            else if(0.3<=shotL && shotL<0.6){
+                document.getElementById("a").src="basic.png";
+                document.getElementById("a").src="LM.png";
+                alert('키퍼가 반응하지도 못하게하는 슛! 골입니다');
+                goal+=1 
+                playingtime+=1 
+                    
+                }
+            else if(0.6<=shotL && shotL<0.9){
+                document.getElementById("a").src="basic.png";
+                document.getElementById("a").src="LR.png";
+                alert('키퍼를 잘속인슛! 골입니다');
+                goal+=1
+                playingtime+=1 
+                }
+            else{
+                document.getElementById("a").src="basic.png";
+                document.getElementById("a").src="LX.png";
+                alert('아! 이게 뭔가요 옆으로 빗나가는공!');
+                playingtime+=1 
+                }
+                var playNum = document.getElementById("playNum");
+                playNum.innerHTML = playingtime;
+                var goalNum = document.getElementById("goalNum");
+                goalNum.innerHTML = goal;
+            }
+
+            function shotM(){
+                var shotL= Math.random();
+                if (0<=shotL && shotL<0.3){
+                    document.getElementById("a").src="basic.png";
+                    document.getElementById("a").src="ML.png";
+                    alert('대담한게 중앙으로 찬 슛! 골입니다');
+                    goal+=1
+                    playingtime+=1 
+                }
+                else if(0.3<=shotL && shotL<0.6){
+                    document.getElementById("a").src="basic.png";
+                    document.getElementById("a").src="MM.png";
+                        alert('허무하게 정면으로가는 슛..! 키퍼의 세이브입니다');
+                        playingtime+=1 
+                    }
+                else if(0.6<=shotL && shotL<0.9){
+                    document.getElementById("a").src="basic.png";
+                    document.getElementById("a").src="MR.png";
+                        alert('살짝 찍어찬 슛! 골입니다');
+                        goal+=1
+                        playingtime+=1 
+                    }
+                else{
+                    document.getElementById("a").src="basic.png";
+                    document.getElementById("a").src="MX.png";
+                    alert('아! 이게 뭔가요 하늘로 뜨는 공!');
+                    playingtime+=1 
+                }
+                var playNum = document.getElementById("playNum");
+                playNum.innerHTML = playingtime;
+                var goalNum = document.getElementById("goalNum");
+                goalNum.innerHTML = goal;
+            }
+
+            function shotR(){
+                var shotL= Math.random();
+                if(0<=shotL && shotL<0.3){
+                    document.getElementById("a").src="basic.png";
+                    document.getElementById("a").src="RL.png";
+                        alert('키퍼를 잘속인 슛! 골입니다');
+                        goal+=1
+                        playingtime+=1 
+                    }
+                else if(0.3<=shotL && shotL<0.6){
+                    document.getElementById("a").src="basic.png";
+                    document.getElementById("a").src="RR.png";
+                        alert('허무하게 정면으로가는 슛..! 키퍼의 세이브입니다');
+                        playingtime+=1 
+                    }
+                else if(0.6<=shotL && shotL<0.9){
+                    document.getElementById("a").src="basic.png";
+                    document.getElementById("a").src="RR.png";
+                        alert('키퍼에게 방향을 읽혔습니다 키퍼의 세이브!');
+                        playingtime+=1 
+                    }
+                else{
+                    document.getElementById("a").src="basic.png";
+                    document.getElementById("a").src="RX.png";
+                    alert('아! 이게 뭔가요 옆으로 빗나가는공!');
+                    playingtime+=1 
+                }
+                var playNum = document.getElementById("playNum");
+                playNum.innerHTML = playingtime;
+                var goalNum = document.getElementById("goalNum");
+                goalNum.innerHTML = goal;
+            }
+            
+    </script>
+
+
+
+
+</head>
+<body>
+    <div class="title">
+    <strong>PENALTY<br> SOCCER</strong> 
+    </div>
+
+<div>
+<div>
+    <div>
+    <span>도전횟수</span><span id="playNum"></span>
+    <span>성공횟수</span><span id="goalNum"></span>
+    </div>
+<img id="a" src="basic.png"style="width:800px;">
+    <div class="box">
+    <button onclick="shotL();">왼쪽</button>
+    <button onclick="shotM();">중간</button>
+    <button onclick="shotR();">오른쪽</button>
+</div>
+</div>
+    </div>
+</body>
+</html>
