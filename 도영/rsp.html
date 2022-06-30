@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rsp.css">
+    <script src="https://kit.fontawesome.com/6a14c7b0bb.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function(){
+            time = 5;
+            
+            document.getElementById("timer").innerText = time;
+            setInterval("timer()",1000);
+        }
+        function timer(){
+            time = time - 1;
+            document.getElementById("timer").innerText = time;
+            if (time == 0){
+                document.getElementById("timer").innerText = "time over";
+                setTimeout(function() {window.location.href='first_screen/start.html';}, 600);
+                setTimeout(function() {window.open('','_self').close();}, 1000);
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="timer" class="timer"></div>
+    <section class="out">
+        <div class="scissors">
+            <button class="bu" onclick="location.href='scissors/scissors.html'">
+                <img src="http://www.paulkorea.co.kr/shopimages/paulkorea/0110000000042.jpg?1528075901" alt="siccors">
+            </button>
+        </div>
+        <div class="rock">
+            <button class="bu" onclick="location.href='rock/rock.html'">
+                <img src="http://gdimg.gmarket.co.kr/463580244/still/600?ver=1631615157" alt="rock">
+            </button>
+        </div>
+        <div class="paper">
+            <button class="bu" onclick="location.href='paper/paper.html'">
+                <img src="https://cdn.pixabay.com/photo/2020/09/30/14/34/paper-5615944_960_720.png" alt="paper">
+            </button>
+        </div>
+    </section>
+</body>
+</html>
