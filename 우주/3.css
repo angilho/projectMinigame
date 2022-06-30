@@ -1,0 +1,151 @@
+*{
+    font-family: 'Black Han Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+
+
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: -webkit-linear-gradient(180deg, rgb(17, 112, 197), rgb(20, 55, 90));
+
+
+    
+
+    
+}
+
+
+.under{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 100px;
+
+    height: 211px;
+
+
+    background: -webkit-linear-gradient(180deg, rgb(17, 112, 197), rgb(20, 55, 90));
+
+    
+
+    
+}
+
+.container{
+    border: 5px solid black;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-rows: repeat(5, 100px);
+    grid-template-columns: repeat(5, 100px);
+    grid-auto-rows: 100px;
+}
+.item{
+    border: 1px dotted black;
+    text-align: center;
+    background-color: gray;
+}
+
+item:nth-child(1){
+    grid-column: 1/2;
+}
+item:nth-child(2){
+    grid-column: 2/3;
+}
+item:nth-child(3){
+    grid-column: 3/4;
+}
+item:nth-child(4){
+    grid-column: 4/5;
+}
+item:nth-child(5){
+    grid-column: 5/6;
+}
+
+item:nth-child(6){
+    grid-column: 1/2;
+}
+item:nth-child(7){
+    grid-column: 2/3;
+}
+item:nth-child(8){
+    grid-column: 3/4;
+}
+item:nth-child(9){
+    grid-column: 4/5;
+}
+item:nth-child(10){
+    grid-column: 5/6;
+}
+
+item:nth-child(11){
+    grid-column: 1/2;
+}
+item:nth-child(12){
+    grid-column: 2/3;
+}
+item:nth-child(13){
+    grid-column: 3/4;
+}
+item:nth-child(14){
+    grid-column: 4/5;
+}
+item:nth-child(15){
+    grid-column: 5/6;
+}
+
+item:nth-child(16){
+    grid-column: 1/2;
+}
+item:nth-child(17){
+    grid-column: 2/3;
+}
+item:nth-child(18){
+    grid-column: 3/4;
+}
+item:nth-child(19){
+    grid-column: 4/5;
+}
+item:nth-child(20){
+    grid-column: 5/6;
+}
+
+item:nth-child(21){
+    grid-column: 1/2;
+}
+item:nth-child(22){
+    grid-column: 2/3;
+}
+item:nth-child(23){
+    grid-column: 3/4;
+}
+item:nth-child(24){
+    grid-column: 4/5;
+}
+item:nth-child(25){
+    grid-column: 5/6;
+}
+
+item:nth-child(1){
+    grid-column: 1/2;
+}
+item:nth-child(2){
+    grid-column: 2/3;
+}
+item:nth-child(3){
+    grid-column: 3/4;
+}
+item:nth-child(4){
+    grid-column: 4/5;
+}
+item:nth-child(5){
+    grid-column: 5/6;
+}
