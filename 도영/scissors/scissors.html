@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="scissors.css">
+    <script src="https://kit.fontawesome.com/6a14c7b0bb.js" crossorigin="anonymous"></script>
+    <script>
+        function getrandom(){
+            while (true){
+                var nRandom = Math.random();
+                var numrandom = Math.floor(nRandom * 4);
+                if (numrandom == 0){
+                    continue;
+                }
+                else{
+                    return numrandom;
+                    break;
+                }
+            }
+        }
+        function aiplacehand(){
+            var hand = getrandom();
+            if (hand == 1){
+                hand = "rock";
+                document.getElementById("ai_picture").src = "http://gdimg.gmarket.co.kr/463580244/still/600?ver=1631615157"
+            }
+            else if (hand == 2){
+                hand = "scissors";
+                document.getElementById("ai_picture").src = "http://www.paulkorea.co.kr/shopimages/paulkorea/0110000000042.jpg?1528075901"
+            }
+            else if (hand == 3){
+                hand = "paper";
+                document.getElementById("ai_picture").src = "https://cdn.pixabay.com/photo/2020/09/30/14/34/paper-5615944_960_720.png"
+            }
+            return hand;
+        }
+        function decide(){
+            var result = aiplacehand();
+            if (result == "rock"){
+                result = "졌다...";
+            }
+            else if (result == "scissors"){
+                result = "비겼다!";
+            }
+            else if (result == "paper"){
+                result = "이겼다!";
+            }
+            return result;
+        }
+
+        window.onload = function(){
+            document.getElementById("result").innerText = "결과는..."
+            setTimeout(function() {aiplacehand();
+                document.getElementById("result").innerText = decide();}, 2000);
+        }
+    </script>
+</head>
+<body>
+    <button class="return" onclick="window.location.href='../first_screen/start.html'">        
+        <span>
+            <i class="fa-solid fa-rotate-left"></i>
+        </span>
+        되돌아가기
+    </button>
+    <div id="result" class="result"></div>
+    <section>
+        <div class="me">
+            <div class="name">Me</div>
+            <div class="my_picture">
+                <img class="scissors" src="http://www.paulkorea.co.kr/shopimages/paulkorea/0110000000042.jpg?1528075901" alt="">
+            </div>
+        </div>
+        <div class="line">
+            vs
+        </div>
+        <div class="ai">
+            <div class="name">AI</div>
+            <div>
+                <img class="ai_picture" id="ai_picture" src="" alt="AI">
+            </div>
+        </div>
+    </section> 
+</body>
+</html>
